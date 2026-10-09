@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background: #555;
+}
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+  display: block;
+}
+.hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.banner:hover .hover-text {
+  opacity: 1;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.p1 {
+  text-align: center;
+  padding: 0 5% 5%;
+}
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.project {
+  width: 45%;
+}
+.project-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+.project-title {
+  text-align: center;
+  color: rgb(35, 35, 73);
+  font-size: 30px;
+  font-weight: bold;
+}
+.gallery {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+}
+.contact {
+  text-align: center;
+  color: blue;
+  padding-bottom: 5%;
+}
+#signup {
+  text-align: center;
+  padding: 40px 20px;
+}
+#signup input {
+  padding: 10px;
+  width: 250px;
+}
+#signup button {
+  padding: 10px;
+  margin-left: 5px;
+}
+.footer {
+  width: 100%;
+  margin-top: 40px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+}
+.footer-section {
+  width: 30%;
+  text-align: center;
+}
+.footer-section h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.footer-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.footer-section a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+.auth-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+.auth-box {
+  width: 400px;
+  background-color: white;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+.auth-box h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.auth-box > p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+}
+.auth-box label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.auth-box input:focus {
+  outline: none;
+  border-color: #333;
+}
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.auth-box button:hover {
+  background-color: #555;
+}
+.auth-box a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+.error {
+  color: red !important;
+  background-color: #ffe5e5;
+  border: 1px solid #ffb3b3;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+.success {
+  color: green !important;
+  background-color: #e5ffe5;
+  border: 1px solid #b3ddb3;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li a {
+    padding: 12px;
+  }
+  .auth-box {
+    width: 100%;
+    padding: 25px;
+  }
+  .auth-page {
+    padding: 30px 15px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+  .project {
+    width: 90%;
+  }
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+}
+.search-button,
+.post-button {
+    padding: 9px 16px;
+    border: none;
+    cursor: pointer;
+}
+.search-button {
+    background-color: #eeeeee;
+}
+.post-button {
+    background-color: #222;
+    color: white;
+}
+.home-page {
+    text-align: center;
+    padding: 80px 20px;
+}
+.home-page h1 {
+    font-size: 40px;
+}
+.home-box {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.auth-page {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.auth-box {
+    width: 400px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.auth-box h1 {
+    text-align: center;
+}
+.auth-box p {
+    text-align: center;
+}
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+.auth-box label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.auth-box input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.auth-box button {
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.auth-box a {
+    color: #0066cc;
+}
+.error {
+    color: red;
+    background-color: #ffe5e5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
